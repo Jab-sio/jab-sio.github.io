@@ -206,9 +206,15 @@ nav .container {
 .about-photo {
     width: 300px;
     height: 300px;
-    object-fit: cover;
-    border-radius: 50%; /* Photo ronde, comme l'exemple */
-    border: 5px solid var(--color-primary);
+    border-radius: 50%; /* Cercle parfait */
+    object-fit: cover; /* Remplit le cercle sans déformation */
+    object-position: top center; /* Décale légèrement vers le haut */
+    display: block;
+    margin: 0 auto;
+    background-color: white; /* Évite les bandes sombres autour */
+    border: 15px solid var(--color-primary); /* Cercle bleu */
+    box-sizing: border-box; /* Empêche le border de dépasser le cadre */
+    padding: 0; /* Supprime le décalage vertical */
 }
 
 .about-text {
